@@ -1,0 +1,11 @@
+
+<div *ngIf="adminLoginService.loggedIn(); else noLogin">
+    <button (click)="logOut()">Log Out</button>
+    <router-outlet></router-outlet>
+</div>
+<ng-template #noLogin>
+    <div class="expaire_message">
+        <h3>Session Expired!</h3>
+        <p>Please reload your browser and Loged In again for containue editing</p>
+    </div>
+</ng-template>

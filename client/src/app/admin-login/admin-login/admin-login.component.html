@@ -1,0 +1,21 @@
+
+<form (submit)="login()">
+    <!-- <div class="form_row">
+        <i class="far fa-user user"></i>
+    </div>
+    <div class="form_row">
+        <i class="fas fa-lock user"></i>
+        <i class="fas show_pass"
+            [class.fa-eye]="hide"
+            [class.fa-eye-slash]="!hide"
+            (click)="hide = !hide">
+        </i>
+    </div>
+    <div class="form_submit">
+    </div> -->
+
+
+    <input class="form_input form_input_l" type="text" placeholder="User Name" [(ngModel)]="user.username" name="username">
+    <input class="form_input form_input_l" [type]="hide ? 'text' : 'password'" placeholder="Password" [(ngModel)]="user.password" name="password">
+    <button class="btn_black btn_s" type="submit" >Log In</button>
+</form>
